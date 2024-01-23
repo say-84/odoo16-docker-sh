@@ -8,18 +8,18 @@ Installing Odoo 16 with one command.
 Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) yourself, then run:
 
 ``` bash
-curl -s https://raw.githubusercontent.com/elblasy33/odoo16-docker-sh/main/run.sh | sudo bash -s odoo-16-one 10016 20016
+curl -s https://raw.githubusercontent.com/say-84/odoo16-docker-sh/main/run.sh | sudo bash -s odoo-16-one 10016 20016
 ```
 
-to set up first Odoo instance @ `localhost:10015` (default master password: `Elblasy2022@1234`)
+to set up first Odoo instance @ `localhost:10016` (default master password: `Sayed@2020`)
 
 and
 
 ``` bash
-curl -s https://raw.githubusercontent.com/elblasy33/odoo16-docker-sh/main/run.sh | sudo bash -s odoo-two 11016 21016
+curl -s https://raw.githubusercontent.com/say-84/odoo16-docker-sh/main/run.sh | sudo bash -s odoo-two 11016 21016
 ```
 
-to set up another Odoo instance @ `localhost:11015` (default master password: `Elblasy2022@1234`)
+to set up another Odoo instance @ `localhost:11016` (default master password: `Sayed@2020`)
 
 Some arguments:
 * First argument (**odoo16-one**): Odoo deploy folder
@@ -57,7 +57,7 @@ docker-compose up -d
 **If you get the permission issue**, change the folder permission to make sure that the container is able to access the directory:
 
 ``` sh
-$ git clone https://github.com/elblasy33/odoo16-docker-sh.git
+$ git clone https://github.com/say-84/odoo16-docker-sh.git
 $ sudo chmod -R 777 addons
 $ sudo chmod -R 777 etc
 $ mkdir -p postgresql
@@ -79,7 +79,7 @@ The **addons/** folder contains custom addons. Just put your custom addons if yo
 
 * To change Odoo configuration, edit file: **etc/odoo.conf**.
 * Log file: **etc/odoo-server.log**
-* Default database password (**admin_passwd**) is `Elblasy2022@1234`, please change it @ [etc/odoo.conf#L60](/etc/odoo.conf#L60)
+* Default database password (**admin_passwd**) is `Sayed@2020`, please change it @ [etc/odoo.conf#L60](/etc/odoo.conf#L60)
 
 # Odoo container management
 
@@ -103,7 +103,7 @@ docker-compose down
 
 # Live chat
 
-In [docker-compose.yml#L21](docker-compose.yml#L21), we exposed port **20015** for live-chat on host.
+In [docker-compose.yml#L21](docker-compose.yml#L21), we exposed port **20016** for live-chat on host.
 
 Configuring **nginx** to activate live chat feature (in production):
 
@@ -112,7 +112,7 @@ Configuring **nginx** to activate live chat feature (in production):
 server {
     #...
     location /longpolling/ {
-        proxy_pass http://0.0.0.0:20015/longpolling/;
+        proxy_pass http://0.0.0.0:20016/longpolling/;
     }
     #...
 }
@@ -121,14 +121,14 @@ server {
 
 # docker-compose.yml
 
-* odoo:15.0
+* odoo:16.0
 * postgres:14
 
-# Odoo 15 screenshots
+# Odoo 16 screenshots
 
-<img src="screenshots/odoo-15-apps-screenshot.png" width="50%">
+<img src="screenshots/odoo-16-apps-screenshot.png" width="50%">
 
-<img src="screenshots/odoo-15-welcome-screenshot.png" width="100%">
+<img src="screenshots/odoo-16-welcome-screenshot.png" width="100%">
 
 <
 
