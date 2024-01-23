@@ -11,7 +11,7 @@ Install [docker](https://docs.docker.com/get-docker/) and [docker-compose](https
 curl -s https://raw.githubusercontent.com/say-84/odoo16-docker-sh/main/run.sh | sudo bash -s odoo-16-one 10016 20016
 ```
 
-to set up first Odoo instance @ `localhost:10016` (default master password: `Elblasy2022@1234`)
+to set up first Odoo instance @ `localhost:10016` (default master password: `Sayed@2020`)
 
 and
 
@@ -19,7 +19,7 @@ and
 curl -s https://raw.githubusercontent.com/say-84/odoo16-docker-sh/main/run.sh | sudo bash -s odoo-two 11016 21016
 ```
 
-to set up another Odoo instance @ `localhost:11016` (default master password: `Elblasy2022@1234`)
+to set up another Odoo instance @ `localhost:11016` (default master password: `Sayed@2020`)
 
 Some arguments:
 * First argument (**odoo16-one**): Odoo deploy folder
@@ -79,7 +79,7 @@ The **addons/** folder contains custom addons. Just put your custom addons if yo
 
 * To change Odoo configuration, edit file: **etc/odoo.conf**.
 * Log file: **etc/odoo-server.log**
-* Default database password (**admin_passwd**) is `Elblasy2022@1234`, please change it @ [etc/odoo.conf#L60](/etc/odoo.conf#L60)
+* Default database password (**admin_passwd**) is `Sayed@2020`, please change it @ [etc/odoo.conf#L60](/etc/odoo.conf#L60)
 
 # Odoo container management
 
@@ -125,10 +125,13 @@ server {
 * postgres:14
 
 # Odoo 16 screenshots
+## Odoo 16.0 screenshots after successful installation.
 
-<img src="screenshots/odoo-16-apps-screenshot.png" width="50%">
+<img src="screenshots/odoo-16-welcome-screenshot.png" width="50%">
 
-<img src="screenshots/odoo-16-welcome-screenshot.png" width="100%">
+<img src="screenshots/odoo-16-apps-screenshot.png" width="100%">
+<img src="screenshots/odoo-16-sales-screen.png" width="100%">
+<img src="screenshots/odoo-16-product-form.png" width="100%">
 
 <
 
